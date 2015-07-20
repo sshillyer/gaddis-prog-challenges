@@ -1,8 +1,14 @@
-/*7. Most Frequent Character
+/*********************************************************************
+** Author: 	Shawn S Hillyer
+** Date:	July 17, 2015
+** Description: ch12pc7.cpp
+Problem solution from Gaddis C++
+
+7. Most Frequent Character
 Write a function that accepts either a pointer to a C-string, or a string object, as its
 argument. The function should return the character that appears most frequently in the
 string. Demonstrate the function in a complete program.
-*/
+*********************************************************************/
 #include <iostream>
 #include <cctype>
 
