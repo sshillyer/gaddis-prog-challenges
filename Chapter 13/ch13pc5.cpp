@@ -28,22 +28,16 @@ int main()
 	// Get search string
 	std::cout << "Enter the search string to find in the file: " << std::endl;
 	std::getline(std::cin, searchStr);
-	/*
-	There's a bug here, you have to type the searchStr twice... first input is discarded and not sure why/how.
-	*/
-
 
 	// Open the file for reading
 	std::fstream file(fileName.c_str(), std::ios::in);
 
 	// Set up counters
 	int totalWordCount = 0, lineNumber = 0;
-
-
-	std::getline(std::cin, searchStr);
-
+	
 	while (file)
 	{
+		// std::cout << "I made it into the loop." << std::endl;
 		// Go to the first element of the string, start a counter for this line, and search
 		int pos = 0; // ensure the .find() call starts at element 0
 		int lineWordCount = 0;
@@ -78,5 +72,6 @@ int main()
 	std::cout << "The string \"" << searchStr << "\" was found " << totalWordCount << " time(s) in the file << " << fileName << "." << std::endl;
 
 	std::cin.get();
+
 	return 0;
 }
